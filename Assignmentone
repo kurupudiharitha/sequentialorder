@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main()
+{
+int totalcount,har,har1,swapvar;
+int array[20];
+printf("the values of input?\n");
+scanf("%d", &totalcount);
+printf("Please enter integers to be sorted:%d \n",totalcount);
+for(har=0;har<totalcount;har++)
+scanf("%d",&array[har]);
+for(har=0;har<totalcount-1;har++)
+{
+for(har1=0;har1<totalcount-har-1;har1++)
+{
+if(array[har1]>array[har1+1])
+{
+swapvar=array[har1];
+array[har1]=array[har1+1];
+array[har1+1]=swapvar;
+}
+}
+}
+printf("after elements sorted in ascending order:\n");
+for(har=0;har<totalcount;har++)
+printf("%d\n",array[har]);
+return 0;
+}
